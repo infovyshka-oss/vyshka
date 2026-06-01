@@ -39,6 +39,19 @@ a { text-decoration: none; color: inherit; }
   padding: 0 24px;
 }
 
+/* Скрыто визуально, доступно поисковикам/скринридерам */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* ============ КНОПКИ ============ */
 .btn {
   display: inline-flex;
