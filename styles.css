@@ -124,7 +124,6 @@ a { text-decoration: none; color: inherit; }
 .header.scrolled .logo { color: var(--blue-700); text-shadow: none; }
 .logo__dot { color: var(--blue-400); }
 .header.scrolled .logo__dot { color: var(--blue-500); }
-.logo__img { height: clamp(30px, 6.5vw, 44px); width: auto; display: block; }
 
 .header__center {
   grid-column: 2;
