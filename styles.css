@@ -588,8 +588,8 @@ a { text-decoration: none; color: inherit; }
     line-height: 1.2;
   }
   .header__socials { flex: 0 0 auto; gap: clamp(7px, 2vw, 16px); }
-  .hsoc { width: clamp(28px, 7.5vw, 52px); height: clamp(28px, 7.5vw, 52px); }
-  .hsoc svg { width: clamp(16px, 4.3vw, 30px); height: clamp(16px, 4.3vw, 30px); }
+  .hsoc { width: clamp(36px, 9.75vw, 68px); height: clamp(36px, 9.75vw, 68px); }
+  .hsoc svg { width: clamp(21px, 5.6vw, 39px); height: clamp(21px, 5.6vw, 39px); }
   .header__inner .nav__phone {
     flex: 0 0 auto;
     grid-column: auto;
