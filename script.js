@@ -54,6 +54,9 @@ form.addEventListener('submit', (e) => {
   const name = form.name.value.trim();
   const phone = form.phone.value.trim();
 
+  // Засчитываем конверсию Google Ads (отправка формы = заявка)
+  reportContactConversion();
+
   // Формируем сообщение и открываем WhatsApp
   const text = `Здравствуйте! Заявка с сайта vyshka.kz%0A` +
                `Имя: ${encodeURIComponent(name)}%0A` +
@@ -63,4 +66,17 @@ form.addEventListener('submit', (e) => {
   status.textContent = 'Открываем WhatsApp — отправьте сообщение, мы перезвоним.';
   form.reset();
   setTimeout(() => (status.textContent = ''), 6000);
+});
+
+// ====== Отслеживание конверсий Google Ads — действие «Контакт» ======
+// Метка конверсии из Google Ads (AW-18203712294)
+function reportContactConversion() {
+  if (typeof gtag === 'function') {
+    gtag('event', 'conversion', { send_to: 'AW-18203712294/zr0dCL3cwLgcEKa2muhD' });
+  }
+}
+
+// Любой клик по «Позвонить», WhatsApp или e-mail считаем заявкой (конверсией)
+document.querySelectorAll('a[href^="tel:"], a[href*="wa.me"], a[href^="mailto:"]').forEach((link) => {
+  link.addEventListener('click', reportContactConversion);
 });
